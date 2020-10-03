@@ -28,7 +28,7 @@ class App extends Component {
     submitClick = () => {
 		  const data = new FormData();
 		  data.append("file", this.state.uploadFile);
-		  return axios.post(`http://localhost:8081/api/upload/${this.state.uploadFile.name}`, data).then(response => {
+		  return axios.post(`http://filebin-env-3.eba-2fmzkv9m.ap-south-1.elasticbeanstalk.com/upload/${this.state.uploadFile.name}`, data).then(response => {
         this.setState({downloadLink: response && response.data.link});
 		  });
     }
